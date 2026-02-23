@@ -32,6 +32,11 @@ return [
                     'route' => 'project-canvas.dashboard',
                     'icon' => 'heroicon-o-home',
                 ],
+                'canvases' => [
+                    'title' => 'Canvases',
+                    'route' => 'project-canvas.canvases.index',
+                    'icon' => 'heroicon-o-clipboard-document-list',
+                ],
             ],
         ],
     ],
