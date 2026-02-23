@@ -1,0 +1,27 @@
+{
+    "name": "martin3r/platforms-project-canvas",
+    "description": "Project Canvas Module for Platform",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Platform Team",
+            "email": "team@platform.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Platform\\ProjectCanvas\\": "src/",
+            "Platform\\ProjectCanvas\\Database\\": "database/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Platform\\ProjectCanvas\\ProjectCanvasServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
