@@ -15,12 +15,12 @@ class GetSnapshotTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.snapshot.GET';
+        return 'project-canvas.snapshot.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/snapshots/{id} - Ruft einen einzelnen Snapshot mit vollstaendigen Daten ab. Parameter: snapshot_id (required).';
+        return 'GET /project-canvas/snapshots/{id} - Ruft einen einzelnen Snapshot mit vollstaendigen Daten ab. Parameter: snapshot_id (required).';
     }
 
     public function getSchema(): array
@@ -34,7 +34,7 @@ class GetSnapshotTool implements ToolContract, ToolMetadataContract
                 ],
                 'snapshot_id' => [
                     'type' => 'integer',
-                    'description' => 'ID des Snapshots (ERFORDERLICH). Nutze "pc.snapshots.GET".',
+                    'description' => 'ID des Snapshots (ERFORDERLICH). Nutze "project-canvas.snapshots.GET".',
                 ],
             ],
             'required' => ['snapshot_id'],

@@ -17,12 +17,12 @@ class CreateCanvasTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.canvases.POST';
+        return 'project-canvas.canvases.POST';
     }
 
     public function getDescription(): string
     {
-        return 'POST /pc/canvases - Erstellt einen neuen Project Canvas (initialisiert automatisch Building Blocks). ERFORDERLICH: name. Optional: description, status (default: draft), contextable_type, contextable_id.';
+        return 'POST /project-canvas/canvases - Erstellt einen neuen Project Canvas (initialisiert automatisch Building Blocks). ERFORDERLICH: name. Optional: description, status (default: draft), contextable_type, contextable_id.';
     }
 
     public function getSchema(): array

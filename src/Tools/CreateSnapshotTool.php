@@ -18,12 +18,12 @@ class CreateSnapshotTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.snapshots.POST';
+        return 'project-canvas.snapshots.POST';
     }
 
     public function getDescription(): string
     {
-        return 'POST /pc/snapshots - Erstellt einen Snapshot des aktuellen Canvas-Zustands. ERFORDERLICH: canvas_id.';
+        return 'POST /project-canvas/snapshots - Erstellt einen Snapshot des aktuellen Canvas-Zustands. ERFORDERLICH: canvas_id.';
     }
 
     public function getSchema(): array

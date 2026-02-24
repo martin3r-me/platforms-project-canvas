@@ -17,12 +17,12 @@ class DeleteEntryTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.entries.DELETE';
+        return 'project-canvas.entries.DELETE';
     }
 
     public function getDescription(): string
     {
-        return 'DELETE /pc/entries/{id} - Soft-loescht einen Project Canvas Entry. Parameter: entry_id (required), confirm (required=true).';
+        return 'DELETE /project-canvas/entries/{id} - Soft-loescht einen Project Canvas Entry. Parameter: entry_id (required), confirm (required=true).';
     }
 
     public function getSchema(): array

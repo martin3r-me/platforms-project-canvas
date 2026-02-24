@@ -17,12 +17,12 @@ class ListCanvasesTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.canvases.GET';
+        return 'project-canvas.canvases.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/canvases - Listet Project Canvases. Parameter: team_id (optional), status (optional), filters/search/sort/limit/offset (optional).';
+        return 'GET /project-canvas/canvases - Listet Project Canvases. Parameter: team_id (optional), status (optional), filters/search/sort/limit/offset (optional).';
     }
 
     public function getSchema(): array

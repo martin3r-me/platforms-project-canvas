@@ -16,12 +16,12 @@ class StatusTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.status.GET';
+        return 'project-canvas.status.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/status - Bewertet Canvas-Vollstaendigkeit und Health-Metriken (Ampel-Logik). ERFORDERLICH: canvas_id.';
+        return 'GET /project-canvas/status - Bewertet Canvas-Vollstaendigkeit und Health-Metriken (Ampel-Logik). ERFORDERLICH: canvas_id.';
     }
 
     public function getSchema(): array

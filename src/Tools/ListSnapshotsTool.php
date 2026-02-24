@@ -18,12 +18,12 @@ class ListSnapshotsTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.snapshots.GET';
+        return 'project-canvas.snapshots.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/snapshots - Listet Snapshots eines Canvas. Parameter: canvas_id (required), limit/offset (optional).';
+        return 'GET /project-canvas/snapshots - Listet Snapshots eines Canvas. Parameter: canvas_id (required), limit/offset (optional).';
     }
 
     public function getSchema(): array

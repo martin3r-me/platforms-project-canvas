@@ -16,12 +16,12 @@ class CompareSnapshotsTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.snapshots.compare.GET';
+        return 'project-canvas.snapshots.compare.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/snapshots/compare - Vergleicht zwei Snapshots und zeigt Unterschiede. ERFORDERLICH: snapshot_a_id, snapshot_b_id.';
+        return 'GET /project-canvas/snapshots/compare - Vergleicht zwei Snapshots und zeigt Unterschiede. ERFORDERLICH: snapshot_a_id, snapshot_b_id.';
     }
 
     public function getSchema(): array

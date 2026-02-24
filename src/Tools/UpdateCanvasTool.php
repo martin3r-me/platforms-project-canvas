@@ -17,12 +17,12 @@ class UpdateCanvasTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.canvases.PUT';
+        return 'project-canvas.canvases.PUT';
     }
 
     public function getDescription(): string
     {
-        return 'PUT /pc/canvases/{id} - Aktualisiert einen Project Canvas. Parameter: canvas_id (required). Optional: name, description, status.';
+        return 'PUT /project-canvas/canvases/{id} - Aktualisiert einen Project Canvas. Parameter: canvas_id (required). Optional: name, description, status.';
     }
 
     public function getSchema(): array
@@ -35,7 +35,7 @@ class UpdateCanvasTool implements ToolContract, ToolMetadataContract
                 ],
                 'canvas_id' => [
                     'type' => 'integer',
-                    'description' => 'ID des Canvas (ERFORDERLICH). Nutze "pc.canvases.GET".',
+                    'description' => 'ID des Canvas (ERFORDERLICH). Nutze "project-canvas.canvases.GET".',
                 ],
                 'name' => [
                     'type' => 'string',

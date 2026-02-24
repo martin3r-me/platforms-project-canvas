@@ -18,12 +18,12 @@ class CreateEntryTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.entries.POST';
+        return 'project-canvas.entries.POST';
     }
 
     public function getDescription(): string
     {
-        return 'POST /pc/entries - Erstellt einen Entry in einem Building Block. ERFORDERLICH: building_block_id, title. Optional: content, entry_type (text/date/person/amount, default: text), position, metadata.';
+        return 'POST /project-canvas/entries - Erstellt einen Entry in einem Building Block. ERFORDERLICH: building_block_id, title. Optional: content, entry_type (text/date/person/amount, default: text), position, metadata.';
     }
 
     public function getSchema(): array

@@ -17,12 +17,12 @@ class DeleteCanvasTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.canvases.DELETE';
+        return 'project-canvas.canvases.DELETE';
     }
 
     public function getDescription(): string
     {
-        return 'DELETE /pc/canvases/{id} - Soft-loescht einen Project Canvas. Parameter: canvas_id (required), confirm (required=true).';
+        return 'DELETE /project-canvas/canvases/{id} - Soft-loescht einen Project Canvas. Parameter: canvas_id (required), confirm (required=true).';
     }
 
     public function getSchema(): array

@@ -15,12 +15,12 @@ class GetCanvasTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.canvas.GET';
+        return 'project-canvas.canvas.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/canvases/{id} - Ruft einen einzelnen Project Canvas ab (inkl. Building Blocks und Entries). Parameter: canvas_id (required), team_id (optional).';
+        return 'GET /project-canvas/canvases/{id} - Ruft einen einzelnen Project Canvas ab (inkl. Building Blocks und Entries). Parameter: canvas_id (required), team_id (optional).';
     }
 
     public function getSchema(): array
@@ -30,7 +30,7 @@ class GetCanvasTool implements ToolContract, ToolMetadataContract
             'properties' => [
                 'canvas_id' => [
                     'type' => 'integer',
-                    'description' => 'ID des Canvas (ERFORDERLICH). Nutze "pc.canvases.GET" um IDs zu finden.',
+                    'description' => 'ID des Canvas (ERFORDERLICH). Nutze "project-canvas.canvases.GET" um IDs zu finden.',
                 ],
                 'team_id' => [
                     'type' => 'integer',

@@ -19,12 +19,12 @@ class ListEntriesTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.entries.GET';
+        return 'project-canvas.entries.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/entries - Listet Entries fuer einen Canvas oder Building Block. Parameter: canvas_id (optional) oder building_block_id (optional), block_type (optional), entry_type (optional).';
+        return 'GET /project-canvas/entries - Listet Entries fuer einen Canvas oder Building Block. Parameter: canvas_id (optional) oder building_block_id (optional), block_type (optional), entry_type (optional).';
     }
 
     public function getSchema(): array

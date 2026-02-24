@@ -18,12 +18,12 @@ class ReorderEntriesTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.entries.reorder.PUT';
+        return 'project-canvas.entries.reorder.PUT';
     }
 
     public function getDescription(): string
     {
-        return 'PUT /pc/entries/reorder - Sortiert Entries innerhalb eines Building Blocks neu. ERFORDERLICH: building_block_id, entry_ids (geordnetes Array von Entry-IDs).';
+        return 'PUT /project-canvas/entries/reorder - Sortiert Entries innerhalb eines Building Blocks neu. ERFORDERLICH: building_block_id, entry_ids (geordnetes Array von Entry-IDs).';
     }
 
     public function getSchema(): array

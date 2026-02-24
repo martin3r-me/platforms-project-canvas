@@ -11,12 +11,12 @@ class PcOverviewTool implements ToolContract, ToolMetadataContract
 {
     public function getName(): string
     {
-        return 'pc.overview.GET';
+        return 'project-canvas.overview.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/overview - Zeigt Uebersicht ueber das Project Canvas Modul (Konzepte, Block-Typen, Entry-Typen, verfuegbare Tools).';
+        return 'GET /project-canvas/overview - Zeigt Uebersicht ueber das Project Canvas Modul (Konzepte, Block-Typen, Entry-Typen, verfuegbare Tools).';
     }
 
     public function getSchema(): array
@@ -83,29 +83,29 @@ class PcOverviewTool implements ToolContract, ToolMetadataContract
                 ],
                 'related_tools' => [
                     'canvases' => [
-                        'list' => 'pc.canvases.GET',
-                        'get' => 'pc.canvas.GET',
-                        'create' => 'pc.canvases.POST',
-                        'update' => 'pc.canvases.PUT',
-                        'delete' => 'pc.canvases.DELETE',
+                        'list' => 'project-canvas.canvases.GET',
+                        'get' => 'project-canvas.canvas.GET',
+                        'create' => 'project-canvas.canvases.POST',
+                        'update' => 'project-canvas.canvases.PUT',
+                        'delete' => 'project-canvas.canvases.DELETE',
                     ],
                     'entries' => [
-                        'list' => 'pc.entries.GET',
-                        'create' => 'pc.entries.POST',
-                        'update' => 'pc.entries.PUT',
-                        'delete' => 'pc.entries.DELETE',
-                        'bulk_create' => 'pc.entries.bulk.POST',
-                        'reorder' => 'pc.entries.reorder.PUT',
+                        'list' => 'project-canvas.entries.GET',
+                        'create' => 'project-canvas.entries.POST',
+                        'update' => 'project-canvas.entries.PUT',
+                        'delete' => 'project-canvas.entries.DELETE',
+                        'bulk_create' => 'project-canvas.entries.bulk.POST',
+                        'reorder' => 'project-canvas.entries.reorder.PUT',
                     ],
                     'snapshots' => [
-                        'list' => 'pc.snapshots.GET',
-                        'create' => 'pc.snapshots.POST',
-                        'get' => 'pc.snapshot.GET',
-                        'compare' => 'pc.snapshots.compare.GET',
+                        'list' => 'project-canvas.snapshots.GET',
+                        'create' => 'project-canvas.snapshots.POST',
+                        'get' => 'project-canvas.snapshot.GET',
+                        'compare' => 'project-canvas.snapshots.compare.GET',
                     ],
                     'utilities' => [
-                        'export' => 'pc.export.GET',
-                        'status' => 'pc.status.GET',
+                        'export' => 'project-canvas.export.GET',
+                        'status' => 'project-canvas.status.GET',
                     ],
                 ],
             ]);

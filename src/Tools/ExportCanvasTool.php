@@ -16,12 +16,12 @@ class ExportCanvasTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.export.GET';
+        return 'project-canvas.export.GET';
     }
 
     public function getDescription(): string
     {
-        return 'GET /pc/export - Exportiert einen Project Canvas als strukturierte Daten (fuer Markdown/PDF). ERFORDERLICH: canvas_id.';
+        return 'GET /project-canvas/export - Exportiert einen Project Canvas als strukturierte Daten (fuer Markdown/PDF). ERFORDERLICH: canvas_id.';
     }
 
     public function getSchema(): array

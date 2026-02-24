@@ -17,12 +17,12 @@ class UpdateEntryTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.entries.PUT';
+        return 'project-canvas.entries.PUT';
     }
 
     public function getDescription(): string
     {
-        return 'PUT /pc/entries/{id} - Aktualisiert einen Project Canvas Entry. Parameter: entry_id (required). Optional: title, content, entry_type, position, metadata.';
+        return 'PUT /project-canvas/entries/{id} - Aktualisiert einen Project Canvas Entry. Parameter: entry_id (required). Optional: title, content, entry_type, position, metadata.';
     }
 
     public function getSchema(): array
@@ -35,7 +35,7 @@ class UpdateEntryTool implements ToolContract, ToolMetadataContract
                 ],
                 'entry_id' => [
                     'type' => 'integer',
-                    'description' => 'ID des Entries (ERFORDERLICH). Nutze "pc.entries.GET".',
+                    'description' => 'ID des Entries (ERFORDERLICH). Nutze "project-canvas.entries.GET".',
                 ],
                 'title' => [
                     'type' => 'string',

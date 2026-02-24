@@ -18,12 +18,12 @@ class BulkCreateEntriesTool implements ToolContract, ToolMetadataContract
 
     public function getName(): string
     {
-        return 'pc.entries.bulk.POST';
+        return 'project-canvas.entries.bulk.POST';
     }
 
     public function getDescription(): string
     {
-        return 'POST /pc/entries/bulk - Bulk-Erstellung von Entries in einem Building Block. ERFORDERLICH: building_block_id, entries (Array mit {title, content?, entry_type?, metadata?}).';
+        return 'POST /project-canvas/entries/bulk - Bulk-Erstellung von Entries in einem Building Block. ERFORDERLICH: building_block_id, entries (Array mit {title, content?, entry_type?, metadata?}).';
     }
 
     public function getSchema(): array
