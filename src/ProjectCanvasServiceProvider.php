@@ -15,7 +15,19 @@ class ProjectCanvasServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        //
+        // Canvas-Resolver überschreiben (loose coupling via Core-Contracts)
+        $this->app->singleton(
+            \Platform\Core\Contracts\CanvasResolverInterface::class,
+            fn () => new \Platform\ProjectCanvas\Services\CoreCanvasResolver()
+        );
+        $this->app->singleton(
+            \Platform\Core\Contracts\CanvasOptionsProviderInterface::class,
+            fn () => new \Platform\ProjectCanvas\Services\CoreCanvasOptionsProvider()
+        );
+        $this->app->singleton(
+            \Platform\Core\Contracts\CanvasForContextProviderInterface::class,
+            fn () => new \Platform\ProjectCanvas\Services\CoreCanvasForContextProvider()
+        );
     }
 
     public function boot(): void
