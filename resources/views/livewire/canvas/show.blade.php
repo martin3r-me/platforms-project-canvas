@@ -43,6 +43,13 @@
                     Zurueck zur Uebersicht
                 </a>
 
+                {{-- PDF Export --}}
+                <a href="{{ route('project-canvas.canvases.pdf', $canvas) }}" target="_blank"
+                   class="d-flex items-center justify-center gap-2 w-full px-3 py-2 text-xs font-semibold text-white bg-[var(--ui-primary)] hover:bg-[var(--ui-primary-hover)] rounded-md transition-colors">
+                    @svg('heroicon-o-arrow-down-tray', 'w-3.5 h-3.5')
+                    PDF Export (DIN A4)
+                </a>
+
                 {{-- Status --}}
                 <div>
                     <h3 class="text-sm font-bold text-[var(--ui-secondary)] uppercase tracking-wider mb-2">Status</h3>
