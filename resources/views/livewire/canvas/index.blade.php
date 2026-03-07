@@ -1,7 +1,13 @@
 <x-ui-page>
     {{-- Navbar --}}
     <x-slot name="navbar">
-        <x-ui-page-navbar title="Project Canvas" icon="heroicon-o-clipboard-document-list" />
+        <x-ui-page-navbar title="" />
+    </x-slot>
+
+    <x-slot name="actionbar">
+        <x-ui-page-actionbar :breadcrumbs="[
+            ['label' => 'Project Canvas', 'icon' => 'clipboard-document-list'],
+        ]" />
     </x-slot>
 
     {{-- Main Content --}}
