@@ -2,6 +2,7 @@
 
 namespace Platform\ProjectCanvas;
 
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
@@ -32,6 +33,10 @@ class ProjectCanvasServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Relation::morphMap([
+            'pc_canvas' => \Platform\ProjectCanvas\Models\PcCanvas::class,
+        ]);
+
         // Step 1: Load config
         $this->mergeConfigFrom(__DIR__ . '/../config/project-canvas.php', 'project-canvas');
         $this->mergeConfigFrom(__DIR__ . '/../config/pc-templates.php', 'pc-templates');
