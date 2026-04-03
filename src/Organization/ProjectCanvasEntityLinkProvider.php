@@ -15,7 +15,7 @@ class ProjectCanvasEntityLinkProvider implements EntityLinkProvider
     public function linkTypeConfig(): array
     {
         return [
-            'pc_canvas' => ['label' => 'Project Canvas', 'icon' => 'clipboard-document-list', 'route' => null],
+            'pc_canvas' => ['label' => 'Project Canvas', 'singular' => 'Project Canvas', 'icon' => 'clipboard-document-list', 'route' => null],
         ];
     }
 
@@ -43,6 +43,11 @@ class ProjectCanvasEntityLinkProvider implements EntityLinkProvider
     }
 
     public function timeTrackableCascades(): array
+    {
+        return [];
+    }
+
+    public function activityChildren(string $morphAlias, array $linkableIds): array
     {
         return [];
     }
