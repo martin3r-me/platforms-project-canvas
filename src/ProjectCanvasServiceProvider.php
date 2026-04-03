@@ -37,6 +37,14 @@ class ProjectCanvasServiceProvider extends ServiceProvider
             'pc_canvas' => \Platform\ProjectCanvas\Models\PcCanvas::class,
         ]);
 
+        // EntityLinkProvider registrieren (loose Kopplung mit Organization-Modul)
+        try {
+            resolve(\Platform\Organization\Services\EntityLinkRegistry::class)
+                ->register(new \Platform\ProjectCanvas\Organization\ProjectCanvasEntityLinkProvider());
+        } catch (\Throwable $e) {
+            // Organization-Modul nicht geladen
+        }
+
         // Step 1: Load config
         $this->mergeConfigFrom(__DIR__ . '/../config/project-canvas.php', 'project-canvas');
         $this->mergeConfigFrom(__DIR__ . '/../config/pc-templates.php', 'pc-templates');
@@ -50,6 +58,7 @@ class ProjectCanvasServiceProvider extends ServiceProvider
             PlatformCore::registerModule([
                 'key' => 'project-canvas',
                 'title' => 'Project Canvas',
+                'group' => 'planning',
                 'routing' => config('project-canvas.routing'),
                 'guard' => config('project-canvas.guard'),
                 'navigation' => config('project-canvas.navigation'),
